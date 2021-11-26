@@ -1,0 +1,20 @@
+menu = pygame_menu.Menu('Welcome', 400, 200,
+                        theme=pygame_menu.themes.THEME_BLUE)
+
+menu.add.text_input('Player Name :', default=' Player1')
+menu.add.button('Play', start_the_game)
+menu.add.button('Quit', pygame_menu.events.EXIT)
+while True:
+
+    screen.blit(bg_image, (0, 0))
+
+    events = pygame.event.get()
+    for event in events:
+        if event.type == pygame.QUIT:
+            exit()
+
+    if menu.is_enabled():
+        menu.update(events)
+        menu.draw(screen)
+
+    pygame.display.update()
