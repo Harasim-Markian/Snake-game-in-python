@@ -1,1 +1,1 @@
-# Lab-Four-Snake-Game
+Snake-Game
